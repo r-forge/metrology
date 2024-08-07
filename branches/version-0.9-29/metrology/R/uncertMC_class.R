@@ -45,8 +45,10 @@ print.uncertMC<-function(x, digits=NULL, right=FALSE, ..., simplify=TRUE, minimi
                 
         }
         print.data.frame(dp,digits=digits, right=right, ...)
-        if(!is.null(x$additional) ) print(as.data.frame(x$additional), ...)
-
+        if(!is.null(x$additional) ) {
+                cat("\nAdditional parameters:\n")
+                print(as.data.frame(x$additional), ...)
+        }
         cat("\n   y: ", format(x$y))
         cat("\nu(y): ", format(x$u.y), "\n")
 

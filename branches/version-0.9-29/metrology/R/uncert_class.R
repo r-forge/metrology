@@ -153,7 +153,7 @@ print.uncert<-function(x, digits=NULL, right=FALSE, ..., simplify=TRUE){
         }
         print.data.frame(dp,digits=digits, right=right, ...)
         if(!is.null(x$additional) ) {
-                cat("Additional parameters:\n")
+                cat("\nAdditional parameters:\n")
                 print(as.data.frame(x$additional), ...)
         }
         cat("\n   y: ", format(x$y))

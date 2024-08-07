@@ -25,6 +25,11 @@ Changes in version 0.9-29-2 from version 0.9-28-4 include:
 	      \code{\link{pdchisq}} and \code{\link{bootPDchisq}}.
 	\item Group label placement in \code{blockplot} has been extended to take 
 	      \code{\link{legend}}-like character specification.
+	\item Variable name checking in \code{uncert} and \code{uncertMC} has 
+	      been harmonised and amended to fix a bug which caused apparent
+	      mismatches between the supplied variables in \code{x} and 
+	      the arguments in function \code{obj} when the function included 
+	      an argument "...".
 }
  WARNING: The addition of a new pairwise statistic involves significant 
  duplication of code used for the bootMSD class. Future versions are likely
