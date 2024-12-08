@@ -63,7 +63,7 @@
 }
 
 \details{
-	See \code{\link{pdchisq}} for the dQuote{PDchisq} object description.
+	See \code{\link{pdchisq}} for the \dQuote{PDchisq} object description.
 
 	The quantiles plotted by the barplot method are based on \code{qchisq}, 
 	divided by \eqn{n-1}.

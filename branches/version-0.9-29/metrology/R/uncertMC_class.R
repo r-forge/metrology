@@ -8,6 +8,8 @@
 #
 # 2014-03-04: Amended reference to plot.density to plot
 #
+# 2024-12-09: Replaced class/string comparisons with inherits()
+#
 print.uncertMC<-function(x, digits=NULL, right=FALSE, ..., simplify=TRUE, minimise=FALSE){
         maxwidth<-12L
         cat("\nUncertainty evaluation\n\n")
@@ -15,7 +17,7 @@ print.uncertMC<-function(x, digits=NULL, right=FALSE, ..., simplify=TRUE, minimi
         cat("Call:\n  ",deparse(x$call), sep="")
         cat("\n\n")
         cat("Expression: ")
-        if(class(x$expr)=="formula" ) {
+        if(inherits(x$expr, "formula") ) {
                 cat(paste(x$expr, collapse=""))
         } else if(is.function(x$expr)) {
                 cat( deparse(x$expr)[1] )

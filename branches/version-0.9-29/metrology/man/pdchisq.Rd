@@ -29,7 +29,7 @@
 }
 \details{
 	
-	For each observation eqn{x_j}{x[j]}, \code{pdchisq} calculates the pairwise chi-squared statistic
+	For each observation \eqn{x_j}{x[j]}, \code{pdchisq} calculates the pairwise chi-squared statistic
 	\deqn{\chi_{j \rm PD}^2 = \frac{1}{N-1} \sum_{i=1}^{N} (x_i - x_j)^2/(s_i^2 + s_j^2 - 2 {\rm cov}(x_i, x_j)) }{%
 			sum( (x[i]-x[j] )^2 / (s[i]^2 + s[j]^2 - 2* cov[i,j]) }
 	that is, the sum of squared differences divided by the estimated uncertainties of the distances.

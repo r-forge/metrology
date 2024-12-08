@@ -1,4 +1,7 @@
 
+# 2024-12-09: Replaced class/string comparisons with inherits()
+#
+
 uncert<-function(obj, ...){
         UseMethod("uncert")
 }
@@ -6,7 +9,7 @@ uncert<-function(obj, ...){
 # Function to check for mismatches in variable and parameter names
 .names.match <- function(expr, x, ...) {
 
-        var.names<-if(class(expr) == "function" ) 
+        var.names<-if(inherits(expr, "function") ) 
                                 names(formals(expr)) 
                         else all.vars(expr)
 

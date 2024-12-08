@@ -8,6 +8,8 @@
 #
 # 2024-08-07  Amended name check to exclude "..." in function arg names
 #
+# 2024-12-09: Replaced class/string comparisons with inherits()
+#
 uncertMC<-function(expr, x, u, method="MC", df, cor, cov, distrib, distrib.pars, B=200, keep.x=TRUE,  vectorized=TRUE, ...) {
 
         if(method != "MC") {
@@ -174,7 +176,7 @@ uncertMC<-function(expr, x, u, method="MC", df, cor, cov, distrib, distrib.pars,
                 } else {
                         y<-eval(expr, c(dfx, constants))
                 }
-        } else if( class(expr)=="formula" ) {
+        } else if( inherits(expr, "formula") ) {
             if ((le <- length(expr)) > 1) {
                 y0<-eval(expr[[2]], c(x, constants))
                 if(!vectorized) {
@@ -230,7 +232,7 @@ uncertMC<-function(expr, x, u, method="MC", df, cor, cov, distrib, distrib.pars,
         constants<-list(...)
         if( is.expression(expr) ) {     
                 y<-apply(x, 1, function(Row,const) eval(expr, c(as.list(Row), const)), const=constants) 
-        } else if( class(expr)=="formula" ) {
+        } else if( inherits(expr, "formula") ) {
                 if ((le <- length(expr)) > 1) {
                 y<-apply(x, 1, function(Row,const) eval(expr[[2]], c(as.list(Row), const)), const=constants) 
                 } else stop("Invalid formula in uncertMC")

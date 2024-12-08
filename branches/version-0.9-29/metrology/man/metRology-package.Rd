@@ -30,6 +30,7 @@ Changes in version 0.9-29-2 from version 0.9-28-4 include:
 	      mismatches between the supplied variables in \code{x} and 
 	      the arguments in function \code{obj} when the function included 
 	      an argument "...".
+	\item Minor changes in help files and some functions to clear new CRAN checks.
 }
  WARNING: The addition of a new pairwise statistic involves significant 
  duplication of code used for the bootMSD class. Future versions are likely

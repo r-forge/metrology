@@ -102,20 +102,19 @@
 	
 	The \code{summary} method returns an object of class \code{"summary.bootMSD"} which 
 	is a list with members:
-	\itemize{
-		\item{msd}{Calculated MSD values from \code{msd}}
-		\item{labels}{character vector of labels for individual data points}
-		\item{probs}{Probabilities used for quantiles}
-		\item{critical.values}{matrix of quantiles. Each row corresponds to a probability 
-			  in \code{probs} and each column to an individual data point.}
-		\item{pvals}{\emph{p}-values estimated as the observed proportion of
-			simulated values exceeding the MSD value calculated by \code{msd}.}
-		\item{p.adjust}{Character value containing the name of the p-value adjustment method used.}
-		\item{p.adj}{ \emph{p}-values adjusted using the given \emph{p}-value adjustment method 
-			specified by \code{p.adjust}.}
-		\item{B}{Number of bootstrap replicates used.}
-		\item{method}{The sampling method used by the parametric bootstrap.}
-	}
+
+	\item{msd}{Calculated MSD values from \code{msd}}
+	\item{labels}{character vector of labels for individual data points}
+	\item{probs}{Probabilities used for quantiles}
+	\item{critical.values}{matrix of quantiles. Each row corresponds to a probability 
+		  in \code{probs} and each column to an individual data point.}
+	\item{pvals}{\emph{p}-values estimated as the observed proportion of
+		simulated values exceeding the MSD value calculated by \code{msd}.}
+	\item{p.adjust}{Character value containing the name of the p-value adjustment method used.}
+	\item{p.adj}{ \emph{p}-values adjusted using the given \emph{p}-value adjustment method 
+		specified by \code{p.adjust}.}
+	\item{B}{Number of bootstrap replicates used.}
+	\item{method}{The sampling method used by the parametric bootstrap.}
 	
 }
 

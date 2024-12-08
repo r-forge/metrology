@@ -345,5 +345,4 @@ bkp(bg, square=TRUE, grp.labs=paste("Level", 1:3),
 }
 % Add one or more standard keywords, see file 'KEYWORDS' in the
 % R documentation directory.
-\keyword{ ~kwd1 }
 \keyword{ hplot }
