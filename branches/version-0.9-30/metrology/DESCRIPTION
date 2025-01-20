@@ -1,9 +1,15 @@
 Package: metRology
-Version: 0.9-29-2
-Date: 2025-01-14
+Version: 0.9-30-1
+Date: 2025-01-19
 Title: Support for Metrological Applications
-Author: Stephen L R Ellison <s.ellison@lgcgroup.com>.
-Maintainer: Stephen L R Ellison <s.ellison@lgcgroup.com>
+Authors@R: c(person(given = c("Stephen", "L", "R"),
+                      family = "Ellison.",
+                      role = "aut",
+                      email = "s.ellison@lgcgroup.com"),
+               person(given = c("Stephen", "L", "R"),
+                      family = "Ellison",
+                      role = "cre",
+                      email = "s.ellison@lgcgroup.com"))
 Depends: R (>= 2.14.0), base, stats   
 Imports: graphics, MASS, numDeriv, robustbase
 Description: Provides classes and calculation and plotting functions 
